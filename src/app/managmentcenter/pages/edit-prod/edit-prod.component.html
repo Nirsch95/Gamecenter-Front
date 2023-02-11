@@ -1,0 +1,57 @@
+<button class="btn btn-lg btn-outline-dark" (click)="open(mymodal)">Editar</button>
+
+<ng-template #mymodal let-modal>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Editar Producto</h4>
+    <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+    </button>
+  </div>
+  <div class="modal-body">
+    <div class="col-md-6 mb-3">
+      <label for="inInventary">En inventario</label>
+      <input type="number" class="form-control" id="inInventary" placeholder="0" name="inInventary" [(ngModel)]="product.inInventory" required>
+      <div class="invalid-feedback">
+        Valid number is required.
+      </div>
+    </div>
+    <h6 class="mb-3">Esta disponible ?</h6>
+    <div class="my-3">
+      <div class="form-check">
+        <input id="enable" name="enabled" type="radio" class="form-check-input" name="enabled" [(ngModel)]="product.enabled" [value]=true checked required>
+        <label class="form-check-label">Disponible</label>
+      </div>
+      <div class="form-check">
+        <input id="disable" name="enabled" type="radio" class="form-check-input" name="enabled" [(ngModel)]="product.enabled" [value]=false required>
+        <label class="form-check-label">No disponible</label>
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="min">Minimo en inventario</label>
+      <input type="number" class="form-control" id="min" placeholder="0" name="min" [(ngModel)]="product.min" required>
+      <div class="invalid-feedback">
+        Valid number is required.
+      </div>
+    </div>
+    <div class="col-md-6 mb-3">
+      <label for="max">Maximo permitido compra</label>
+      <input type="number" class="form-control" id="max" placeholder="0" name="max" [(ngModel)]="product.max" required>
+      <div class="invalid-feedback">
+        Valid number is required.
+      </div>
+    </div>
+    <h6 class="mb-3">Estado ?</h6>
+    <div class="my-3">
+      <div class="form-check">
+        <input id="active" name="state" type="radio" class="form-check-input" [(ngModel)]="product.state" [value]=true checked required>
+        <label class="form-check-label">Activo</label>
+      </div>
+      <div class="form-check">
+        <input id="inactive" name="state" type="radio" class="form-check-input" [(ngModel)]="product.state" [value]=false required>
+        <label class="form-check-label">Inactivo</label>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="editProduct(product)">Actualizar</button>
+  </div>
+</ng-template>

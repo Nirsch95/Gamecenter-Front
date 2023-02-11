@@ -1,0 +1,51 @@
+<div class="container">
+  <nav class="navbar navbar-expand-lg bg-light rounded mb-4" aria-label="Eleventh navbar example">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Game Center</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarsExample09">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="cms/crud">Management</a>
+          </li>
+        </ul>
+        <form role="search">
+          <input class="form-control" type="search" placeholder="Search" aria-label="Search">
+        </form>
+      </div>
+    </div>
+  </nav>
+</div>
+<div class="container">
+  <div class="row row-cols-1 row-cols-md-2 mb-2 text-center">
+    <div class="col">
+      <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-header py-3">
+          <h4 class="my-0 fw-normal">Crear producto</h4>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title pricing-card-title">Aqui puedes crear un producto</h2>
+          <button type="button" class="btn btn-lg btn-outline-dark" routerLink="create">Crear</button>
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card mb-4 rounded-3 shadow-sm">
+        <div class="card-header py-3">
+          <h4 class="my-0 fw-normal">Editar producto</h4>
+        </div>
+        <div class="card-body">
+          <h2 class="card-title pricing-card-title">Aquí puedes editar un producto</h2>
+          <button type="button" class="btn btn-lg btn-outline-dark" routerLink="edit">Editar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  <router-outlet></router-outlet>
