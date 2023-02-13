@@ -1,8 +1,9 @@
 import { CrudComponent } from './components/crud/crud.component';
-import { NgModule } from '@angular/core';
+import { NgModule, Component } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CreateComponent } from './pages/create/create.component';
 import { EditComponent } from './pages/edit/edit.component';
+import { BuysComponent } from './pages/buys/buys.component';
 
 const routes: Routes = [
   {
@@ -21,6 +22,10 @@ const routes: Routes = [
       {
         path: 'edit',
         component: EditComponent
+      },
+      {
+        path: 'buys',
+        component: BuysComponent
       }
     ]
   }

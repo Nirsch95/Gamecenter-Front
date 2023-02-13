@@ -7,6 +7,7 @@ import { CreateComponent } from './pages/create/create.component';
 import { EditComponent } from './pages/edit/edit.component';
 import { CrudComponent } from './components/crud/crud.component';
 import { FormsModule } from '@angular/forms';
+import { BuysComponent } from './pages/buys/buys.component';
 
 
 @NgModule({
@@ -14,7 +15,8 @@ import { FormsModule } from '@angular/forms';
     CreateComponent,
     EditComponent,
     CrudComponent,
-    EditProdComponent
+    EditProdComponent,
+    BuysComponent
   ],
   imports: [
     CommonModule,

@@ -22,7 +22,6 @@ export class EditComponent implements OnInit{
   getProducts(): void{
     this.productSvr.getPage(this.page).subscribe((data) => {
       this.products = data
-      console.log(this.products);
     });
     this.productSvr.getTotalPages().subscribe((data) => (this.pages = new Array(data)));
   }

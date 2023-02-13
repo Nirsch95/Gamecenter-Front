@@ -39,6 +39,7 @@ getDatos(){
 editProduct(product: ProductI): void{
   product.id=this.idproduct.id;
   product.name=this.idproduct.name;
+  product.description=this.idproduct.description;
   console.log(product);
   this.productSvr.editProduct(product).subscribe({
 

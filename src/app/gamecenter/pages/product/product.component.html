@@ -1,0 +1,17 @@
+<div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+  <div class="col p-4 d-flex flex-column position-static">
+    <h3 class="mb-0">{{ product.name }}</h3>
+    <div class="mb-1 text-muted">{{ product.inInventory-product.min }} unds</div>
+    <p class="card-text mb-auto">{{ product.description }}</p>
+  </div>
+  <div class="col-auto d-none d-lg-block" >
+    <img [src]="product.image" alt="" height="200px" width="150px">
+  </div>
+  <div style="text-align: center;">
+    <button type="button" class="btn btn-dark" (click)="addQuantity()">+</button>
+      <input type="number" name="quantity" [(ngModel)]="prodbuys.quantity">
+    <button type="button" class="btn btn-dark" (click)="subtractQuantity()">-</button>
+    <button type="button" class="btn btn-dark" (click)="addCart()">Agregar</button>
+
+  </div>
+</div>

@@ -1,0 +1,54 @@
+
+  <a class="nav-link active" (click)="open(mymodal)">
+    <i class="bi-cart"></i>
+  </a>
+
+  <ng-template #mymodal let-modal>
+    <div class="modal-header">
+      <h4 class="modal-title" id="modal-basic-title">Datos para la compra</h4>
+      <button type="button" class="btn-close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      </button>
+    </div>
+
+    <div class="modal-body">
+      <div class="col-auto" *ngFor="let product of prods">
+      <div class="col-auto d-none d-lg-block mb-2" >
+        <img [src]="product.image" alt="" height="200px" width="150px"> Cantidad: {{product.quantity}}
+      </div>
+    </div>
+      <h6 class="mb-3">Tipo de Identificación</h6>
+      <div class="my-3">
+        <div class="form-check">
+          <input id="TI" name="idType" type="radio" class="form-check-input" name="TI" [(ngModel)]="buy.idType" [value]="idTypes[0]" checked required>
+          <label class="form-check-label">T.I.</label>
+        </div>
+        <div class="form-check">
+          <input id="CC" name="idType" type="radio" class="form-check-input" name="CC" [(ngModel)]="buy.idType" [value]="idTypes[1]" required>
+          <label class="form-check-label">C.C.</label>
+        </div>
+        <div class="form-check">
+          <input id="NIT" name="idType" type="radio" class="form-check-input" name="NIT" [(ngModel)]="buy.idType" [value]="idTypes[2]" required>
+          <label class="form-check-label">NIT</label>
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="clientId">Identificación del Cliente</label>
+        <input type="text" class="form-control" id="clientId" placeholder="0" name="clientId" [(ngModel)]="buy.clientId" required>
+        <div class="invalid-feedback">
+          Valid Client Identification is required.
+        </div>
+      </div>
+      <div class="col-md-6 mb-3">
+        <label for="clientName">Nombre del Cliente</label>
+        <input type="text" class="form-control" id="clientName" placeholder="name" name="clientName" [(ngModel)]="buy.clientName" required>
+        <div class="invalid-feedback">
+          Valid Client Name is required.
+        </div>
+      </div>
+
+    </div>
+    <div class="modal-footer">
+      <button type="button" class="btn btn-outline-dark" (click)="emptyCart()">Vaciar</button>
+      <button type="button" class="btn btn-outline-dark" (click)="createBuy(buy)">Comprar</button>
+    </div>
+  </ng-template>

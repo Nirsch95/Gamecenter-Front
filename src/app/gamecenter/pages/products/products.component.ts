@@ -1,3 +1,4 @@
+import { ProdBuyI } from './../../../models/prodbuy-i';
 import { ProductService } from './../../../services/product.service';
 import { Component, OnInit } from '@angular/core';
 import { ProductI } from 'src/app/models/product-i';
@@ -11,7 +12,6 @@ export class ProductsComponent implements OnInit{
 
   products: ProductI[] | undefined;
   page: number = 0;
-  quantity: number = 0;
   pages: Array<number> | undefined;
 
   constructor(private productSvr : ProductService){}
@@ -21,9 +21,10 @@ export class ProductsComponent implements OnInit{
     }
 
     getProducts(): void{
-      this.productSvr.getPage(this.page).subscribe((data) => {
+      this.productSvr.getPage2(this.page).subscribe((data) => {
         this.products = data
         console.log(this.products);
+
       });
       this.productSvr.getTotalPages().subscribe((data) => (this.pages = new Array(data)));
     }
@@ -43,18 +44,6 @@ export class ProductsComponent implements OnInit{
 
     nextPage(): void {
       !this.isLast() ? (this.page++, this.getProducts()) : false;
-    }
-
-    subtractQuantity(): void {
-      if (this.quantity == 0){
-        this.quantity = 0;
-      }else{
-        this.quantity--;
-      }
-    }
-
-    addQuantity(): void {
-      this.quantity++
     }
 
     getPage(page: number): void {
