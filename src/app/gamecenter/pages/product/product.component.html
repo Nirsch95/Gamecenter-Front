@@ -9,7 +9,7 @@
   </div>
   <div style="text-align: center;">
     <button type="button" class="btn btn-dark" (click)="addQuantity()">+</button>
-      <input type="number" name="quantity" [(ngModel)]="prodbuys.quantity">
+      <input type="number" name="quantity" maxlength="10" [(ngModel)]="prodbuys.quantity">
     <button type="button" class="btn btn-dark" (click)="subtractQuantity()">-</button>
     <button type="button" class="btn btn-dark" (click)="addCart()">Agregar</button>
 

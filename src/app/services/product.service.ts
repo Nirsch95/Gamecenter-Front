@@ -33,7 +33,7 @@ export class ProductService {
     return this.http.get<ProductI[]>(direction)
     .pipe(
       retry(3),
-      map(products => products.filter(product => product.enabled === true))
+      map(products => products.filter(product => product.enabled === true && product.state === true))
     );
   }
 
