@@ -1,27 +1,40 @@
-# FrontGamecenter
+# Reto Sofka.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.2.
+Se requiere una solución Backend para el manejo de inventario y la compra de dichos productos disponibles.
 
-## Development server
+Consumo con Angular implementando Bootstrap bajo SASS.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Tecnologias :wrench:
 
-## Code scaffolding
+*	VSC
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+![](https://code.visualstudio.com/assets/apple-touch-icon.png)
 
-## Build
+* Angular
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+![](https://miro.medium.com/max/256/1*8HndWtUBXmokgvrEaOpirw.png)
 
-## Running unit tests
+### Autor
+[@Nirsch95](https://github.com/Nirsch95) - Andrés Castro :wolf:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Everything is solved in the develop branch, new things were learned.
 
-## Running end-to-end tests
+## Costumer View
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+![image_2023-02-14_185029153](https://user-images.githubusercontent.com/37886668/218888938-9c98dfc4-d567-4023-b757-3c8b1f7faa51.png)
 
-## Further help
+## Shopping Cart
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+![image](https://user-images.githubusercontent.com/37886668/218890249-0f66b104-1062-479d-a7de-f9ab789d126c.png)
+
+## Managment View
+
+![image](https://user-images.githubusercontent.com/37886668/218889101-fb934d94-16d3-4b35-ad28-493ad9b1c6e3.png)
+
+## Create Product
+
+![image](https://user-images.githubusercontent.com/37886668/218889221-6805a273-ebe8-49fc-b9ec-ce212141f37f.png)
+
+## Edit Product
+
+![image](https://user-images.githubusercontent.com/37886668/218890072-9e9ef58b-04f8-4779-a540-9dddf659381b.png)
